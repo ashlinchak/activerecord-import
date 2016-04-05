@@ -546,6 +546,7 @@ class ActiveRecord::Base
     # of class => objects to import.
     def find_associated_objects_for_import(associated_objects_by_class, model)
       associated_objects_by_class[model.class.name] ||= {}
+      return associated_objects_by_class if model.id.nil?
 
       association_reflections =
         model.class.reflect_on_all_associations(:has_one) +
