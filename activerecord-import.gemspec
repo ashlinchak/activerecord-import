@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "activerecord-import"
   gem.require_paths = ["lib"]
-  gem.version       = ActiveRecord::Import::VERSION
+  gem.version       = ActiveRecord::Import::VERSION.dup
 
   gem.required_ruby_version = ">= 1.9.2"
 
